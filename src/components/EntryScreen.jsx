@@ -4,19 +4,14 @@ import { LIFTS, WORKOUT_TYPES, saveSet } from '../lib/supabase'
 const today = () =>
   new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
 
-export default function EntryScreen({ onSetLogged, todaysSets }) {
-  const [workout, setWorkout] = useState('')
-  const [lift, setLift] = useState('')
-  const [weight, setWeight] = useState('')
-  const [reps, setReps] = useState('')
+export default function EntryScreen({ onSetLogged, todaysSets, workout, setWorkout, lift, setLift, weight, setWeight, reps, setReps }) {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState(null)
 
-  // When workout changes, default lift to first in list (preserve if same category)
+  // When workout changes, only reset lift if it doesn't belong to the new category
   useEffect(() => {
     if (workout) {
       const lifts = LIFTS[workout] || []
-      // Only reset lift if current lift isn't in new category
       if (!lifts.includes(lift)) setLift(lifts[0] || '')
     }
   }, [workout])
@@ -30,7 +25,6 @@ export default function EntryScreen({ onSetLogged, todaysSets }) {
     try {
       const saved = await saveSet({ workout_type: workout, lift, weight_lbs: weight, reps })
       onSetLogged(saved)
-      // Keep all field values — user just changes what's different
     } catch (err) {
       console.error(err)
       setError('Failed to save. Check your Supabase connection.')
@@ -47,7 +41,6 @@ export default function EntryScreen({ onSetLogged, todaysSets }) {
       </div>
 
       <div className="content">
-        {/* Workout selector */}
         <div className="field">
           <label>Workout</label>
           <div className="select-wrap">
@@ -60,7 +53,6 @@ export default function EntryScreen({ onSetLogged, todaysSets }) {
           </div>
         </div>
 
-        {/* Lift selector */}
         <div className="field">
           <label>Lift</label>
           <div className="select-wrap">
@@ -77,7 +69,6 @@ export default function EntryScreen({ onSetLogged, todaysSets }) {
           </div>
         </div>
 
-        {/* Weight + Reps */}
         <div className="num-row">
           <div className="field">
             <label>Weight (lbs)</label>
@@ -113,7 +104,6 @@ export default function EntryScreen({ onSetLogged, todaysSets }) {
           {saving ? 'Saving...' : 'Log Set →'}
         </button>
 
-        {/* Today's sets */}
         {todaysSets.length > 0 && (
           <div className="sets-log">
             <div className="sets-log-title">Today's sets</div>
