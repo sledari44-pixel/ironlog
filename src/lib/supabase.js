@@ -57,7 +57,7 @@ export const LIFTS = {
     'Tricep Pushdown Machine', 'Triceps Ext Rope', 'Triceps Pushdowns with Vbar',
   ],
   Pull: [
-    'Back Row Machine', 'Bent Over Back Row Bar', 'Bent Over Back Row Bar Freemotion',
+    'Back Row Machine', 'Bent Over Back Row Bar', 'Meadows Row',
     'Cable Curls Dual Stack', 'Cable Curls EZ Bar', 'Cable Hammer Curls Rope',
     'Cable Row Neutral', 'Cable Row Single Arm', 'Cable Row Vbar', 'Cable Row WG',
     'Chest Supported Row Dumbbell', 'Chest Supported Row Dumbbell WG',
@@ -72,8 +72,8 @@ export const LIFTS = {
   ],
   Legs: [
     'Back Squat', 'Bulgarian Split Squat', 'Deadlift', 'Goblet Squat', 'Hack Squat',
-    'Hammer Strength Hip Thrust', 'Leg Curl Prone Machine', 'Leg Ext Machine',
-    'Leg Press', 'Leg Press Stack Machine', 'RDL Bar', 'RDL Dumbbell', 'Seated Calf Raise',
+    'Hammer Strength Hip Thrust', 'Leg Curl Prone Machine', 'Leg Curl Seated', 'Leg Ext Machine',
+    'Leg Press', 'Leg Press Stack Machine', 'RDL Bar', 'RDL Dumbbell', 'Seated Calf Raise','Standing Calf Raises',
   ],
   Core: [
     'Ab Wheel', 'Cable Crunch', 'Dead Bug', 'Decline Sit-Up', 'Dragon Flag',
