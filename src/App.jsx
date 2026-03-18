@@ -12,6 +12,12 @@ export default function App() {
   const [todaysSets, setTodaysSets] = useState([])
   const [tab, setTab] = useState('entry') // bottom nav tab
 
+  // Form state lives here so it persists through rest timer
+  const [workout, setWorkout] = useState('')
+  const [lift, setLift] = useState('')
+  const [weight, setWeight] = useState('')
+  const [reps, setReps] = useState('')
+
   // Load today's sets on mount
   useEffect(() => {
     fetchTodaysSets()
@@ -42,6 +48,10 @@ export default function App() {
         <EntryScreen
           onSetLogged={handleSetLogged}
           todaysSets={todaysSets}
+          workout={workout} setWorkout={setWorkout}
+          lift={lift} setLift={setLift}
+          weight={weight} setWeight={setWeight}
+          reps={reps} setReps={setReps}
         />
       )}
 
