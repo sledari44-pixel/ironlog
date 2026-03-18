@@ -52,7 +52,7 @@ export const LIFTS = {
     'Hammer Strength Shoulder Press', 'Incline Bench Press Bar',
     'Incline Bench Press Dumbbell', 'Incline Bench Press Smith Machine',
     'JM Press Smith Machine', 'Lateral Raises Dumbbell', 'Overhead Tricep Ext - Rope',
-    'Shoulder Press Dumbbell', 'Skull Crushers', 'Tricep Ext EZ Bar',
+    'Shoulder Press Dumbbell', 'Skull Crushers', 'Tricep Ext EZ Bar', 'Single Arm Tricep Ext',
     'Tricep Pushdown Machine', 'Triceps Ext Rope', 'Triceps Pushdowns with Vbar',
   ],
   Pull: [
