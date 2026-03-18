@@ -18,6 +18,7 @@ export async function saveSet({ workout_type, lift, weight_lbs, reps }) {
   return data
 }
 
+
 // Fetch today's sets
 export async function fetchTodaysSets() {
   const today = new Date().toISOString().split('T')[0]
