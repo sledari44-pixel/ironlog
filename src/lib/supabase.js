@@ -81,7 +81,7 @@ export const LIFTS = {
   ],
   Cardio: [
     'Elliptical', 'HIIT Circuit', 'Jump Rope', 'Rowing Machine',
-    'Stair Climber', 'Stationary Bike', 'Swimming', 'Treadmill Run',
+    'Stair Climber', 'Stationary Bike', 'Treadmill Walk', 'Treadmill Run',
   ],
   Mobility: [
     'Ankle Circles', 'Band Pull-Apart', 'Cat-Cow', 'Hip Flexor Stretch',
