@@ -88,7 +88,7 @@ export const LIFTS = {
   'Shrug Dumbbell',
   'Single Arm Cable Lat Pulldown',
   'Straight Bar Curl',
-          ]
+          ],
   Legs: [
     'Back Squat', 'Bulgarian Split Squat', 'Deadlift', 'Goblet Squat', 'Hack Squat',
     'Hammer Strength Hip Thrust', 'Leg Curl Prone Machine', 'Leg Curl Seated', 'Leg Ext Machine',
